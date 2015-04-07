@@ -16,6 +16,9 @@
 		F1CAE74E1AD446AC003ACCC9 /* SelectCountryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE74D1AD446AC003ACCC9 /* SelectCountryTests.m */; };
 		F1CAE7591AD44705003ACCC9 /* SelectCountryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE7581AD44705003ACCC9 /* SelectCountryTVC.m */; };
 		F1CAE75E1AD44726003ACCC9 /* Synchronizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE75D1AD44726003ACCC9 /* Synchronizer.m */; };
+		F1CAE7621AD44C3C003ACCC9 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE7611AD44C3C003ACCC9 /* Country.m */; };
+		F1CAE7651AD44C48003ACCC9 /* CountriesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE7641AD44C48003ACCC9 /* CountriesManager.m */; };
+		F1CAE7691AD45CF5003ACCC9 /* ShowCapitalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE7681AD45CF5003ACCC9 /* ShowCapitalVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,12 @@
 		F1CAE7581AD44705003ACCC9 /* SelectCountryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCountryTVC.m; sourceTree = "<group>"; };
 		F1CAE75C1AD44726003ACCC9 /* Synchronizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronizer.h; sourceTree = "<group>"; };
 		F1CAE75D1AD44726003ACCC9 /* Synchronizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Synchronizer.m; sourceTree = "<group>"; };
+		F1CAE7601AD44C3C003ACCC9 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
+		F1CAE7611AD44C3C003ACCC9 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
+		F1CAE7631AD44C48003ACCC9 /* CountriesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountriesManager.h; sourceTree = "<group>"; };
+		F1CAE7641AD44C48003ACCC9 /* CountriesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountriesManager.m; sourceTree = "<group>"; };
+		F1CAE7671AD45CF5003ACCC9 /* ShowCapitalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowCapitalVC.h; sourceTree = "<group>"; };
+		F1CAE7681AD45CF5003ACCC9 /* ShowCapitalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowCapitalVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +117,7 @@
 		F1CAE7301AD446AC003ACCC9 /* SelectCountry */ = {
 			isa = PBXGroup;
 			children = (
+				F1CAE7661AD44C4C003ACCC9 /* Helper */,
 				F1CAE75F1AD4472C003ACCC9 /* Model */,
 				F1CAE75B1AD44710003ACCC9 /* View */,
 				F1CAE75A1AD44709003ACCC9 /* Controller */,
@@ -149,6 +159,8 @@
 		F1CAE75A1AD44709003ACCC9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F1CAE7671AD45CF5003ACCC9 /* ShowCapitalVC.h */,
+				F1CAE7681AD45CF5003ACCC9 /* ShowCapitalVC.m */,
 				F1CAE7571AD44705003ACCC9 /* SelectCountryTVC.h */,
 				F1CAE7581AD44705003ACCC9 /* SelectCountryTVC.m */,
 			);
@@ -166,10 +178,21 @@
 		F1CAE75F1AD4472C003ACCC9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F1CAE7601AD44C3C003ACCC9 /* Country.h */,
+				F1CAE7611AD44C3C003ACCC9 /* Country.m */,
+				F1CAE7631AD44C48003ACCC9 /* CountriesManager.h */,
+				F1CAE7641AD44C48003ACCC9 /* CountriesManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F1CAE7661AD44C4C003ACCC9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
 				F1CAE75C1AD44726003ACCC9 /* Synchronizer.h */,
 				F1CAE75D1AD44726003ACCC9 /* Synchronizer.m */,
 			);
-			name = Model;
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,8 +333,11 @@
 			files = (
 				F1CAE7591AD44705003ACCC9 /* SelectCountryTVC.m in Sources */,
 				F1CAE7371AD446AC003ACCC9 /* AppDelegate.m in Sources */,
+				F1CAE7691AD45CF5003ACCC9 /* ShowCapitalVC.m in Sources */,
 				F1CAE7341AD446AC003ACCC9 /* main.m in Sources */,
 				F1CAE75E1AD44726003ACCC9 /* Synchronizer.m in Sources */,
+				F1CAE7651AD44C48003ACCC9 /* CountriesManager.m in Sources */,
+				F1CAE7621AD44C3C003ACCC9 /* Country.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,1 +1,1 @@
-Example used on iOS course at MundoMac (UY)
+Example used in iOS course at MundoMac (UY)

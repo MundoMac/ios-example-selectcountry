@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h> 
 
 @interface Synchronizer : NSObject
+
++ (Synchronizer *)sharedInstance;
+
+- (void)getCountries:(void(^)(NSArray *))success;
 
 @end
