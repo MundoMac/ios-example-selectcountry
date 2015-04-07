@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SelectCountryTVC.h
 //  SelectCountry
 //
 //  Created by Diego Mazzone on 7/4/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SelectCountryTVC : UITableViewController
 
 @end
-
