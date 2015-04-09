@@ -20,11 +20,14 @@ PODS:
   - AFNetworking/UIKit (2.5.2):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - SVPullToRefresh (0.4.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - SVPullToRefresh
 
 SPEC CHECKSUMS:
   AFNetworking: fefbce9660acb17f48ae0011292d4da0f457bf36
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
 
 COCOAPODS: 0.36.1
