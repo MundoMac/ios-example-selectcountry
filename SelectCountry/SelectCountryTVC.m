@@ -9,19 +9,23 @@
 #import "SelectCountryTVC.h"
 #import "CountriesManager.h"
 #import "ShowCapitalVC.h"
+#import <SVPullToRefresh/SVPullToRefresh.h>
 
-@interface SelectCountryTVC ()
+@interface SelectCountryTVC () <UIActionSheetDelegate>
 
 @end
 
 @implementation SelectCountryTVC
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
-    [[CountriesManager sharedInstance] updateCountries];
-    
     [self registerForNotifications];
+    
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        [[CountriesManager sharedInstance] updateCountries];
+    }];
 }
 
 - (void)registerForNotifications
@@ -35,6 +39,7 @@
 - (void)handleCountriesUpdateded:(NSNotification *)notif
 {
     [self.tableView reloadData];
+    [self.tableView.pullToRefreshView stopAnimating];
 }
 
 #pragma mark - Table view data source
@@ -63,6 +68,29 @@
     cell.textLabel.text = country.name;
     
     return cell;
+}
+
+#pragma mark - Table View Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Cancelar"
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:@"Mostrar capital", @"Ver en mapa", nil];
+    [actionSheet showInView:self.tableView];
+}
+
+#pragma mark - Action Sheet Delegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if ([[actionSheet buttonTitleAtIndex:buttonIndex] isEqualToString:@"Mostrar capital"]) {
+        
+        [self performSegueWithIdentifier:@"ShowCapital" sender:nil];
+        
+    }
 }
 
 #pragma mark - Navigation
