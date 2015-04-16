@@ -32,6 +32,8 @@
             Country *country = [Country new];
             country.name = countryInfo[@"name"];
             country.capital = countryInfo[@"capital"];
+            country.lat = [[countryInfo[@"latlng"] firstObject] doubleValue];
+            country.lng = [[countryInfo[@"latlng"] lastObject] doubleValue];
             
             [countriesMutable addObject:country];
         }

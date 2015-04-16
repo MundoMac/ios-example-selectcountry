@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
-@interface Country : NSObject
+@interface Country : NSObject <MKAnnotation>
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *capital;
+@property (nonatomic) double lat;
+@property (nonatomic) double lng;
 
 @end

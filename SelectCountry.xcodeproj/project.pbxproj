@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		89423C62D8D5870B9F33617F /* libPods-SelectCountry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A96C6C6DB424258A27CD5B6C /* libPods-SelectCountry.a */; };
+		F11B15EE1AE0528D00482F39 /* ShowCountryOnMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F11B15ED1AE0528D00482F39 /* ShowCountryOnMapVC.m */; };
+		F11B15F01AE0543700482F39 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11B15EF1AE0543700482F39 /* MapKit.framework */; };
 		F1CAE7341AD446AC003ACCC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE7331AD446AC003ACCC9 /* main.m */; };
 		F1CAE7371AD446AC003ACCC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE7361AD446AC003ACCC9 /* AppDelegate.m */; };
 		F1CAE73D1AD446AC003ACCC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1CAE73B1AD446AC003ACCC9 /* Main.storyboard */; };
@@ -35,6 +37,9 @@
 		2BE352D34758658FB060D21B /* Pods-SelectCountry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelectCountry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SelectCountry/Pods-SelectCountry.debug.xcconfig"; sourceTree = "<group>"; };
 		A96C6C6DB424258A27CD5B6C /* libPods-SelectCountry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SelectCountry.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C10C2D83D26B90234899A0 /* Pods-SelectCountry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SelectCountry.release.xcconfig"; path = "Pods/Target Support Files/Pods-SelectCountry/Pods-SelectCountry.release.xcconfig"; sourceTree = "<group>"; };
+		F11B15EC1AE0528D00482F39 /* ShowCountryOnMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowCountryOnMapVC.h; sourceTree = "<group>"; };
+		F11B15ED1AE0528D00482F39 /* ShowCountryOnMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowCountryOnMapVC.m; sourceTree = "<group>"; };
+		F11B15EF1AE0543700482F39 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F1CAE72E1AD446AC003ACCC9 /* SelectCountry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelectCountry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1CAE7321AD446AC003ACCC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1CAE7331AD446AC003ACCC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11B15F01AE0543700482F39 /* MapKit.framework in Frameworks */,
 				89423C62D8D5870B9F33617F /* libPods-SelectCountry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +95,7 @@
 		A5B7AAFF0ABB2A9B9D3A0F54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F11B15EF1AE0543700482F39 /* MapKit.framework */,
 				A96C6C6DB424258A27CD5B6C /* libPods-SelectCountry.a */,
 			);
 			name = Frameworks;
@@ -163,6 +170,8 @@
 				F1CAE7681AD45CF5003ACCC9 /* ShowCapitalVC.m */,
 				F1CAE7571AD44705003ACCC9 /* SelectCountryTVC.h */,
 				F1CAE7581AD44705003ACCC9 /* SelectCountryTVC.m */,
+				F11B15EC1AE0528D00482F39 /* ShowCountryOnMapVC.h */,
+				F11B15ED1AE0528D00482F39 /* ShowCountryOnMapVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -331,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11B15EE1AE0528D00482F39 /* ShowCountryOnMapVC.m in Sources */,
 				F1CAE7591AD44705003ACCC9 /* SelectCountryTVC.m in Sources */,
 				F1CAE7371AD446AC003ACCC9 /* AppDelegate.m in Sources */,
 				F1CAE7691AD45CF5003ACCC9 /* ShowCapitalVC.m in Sources */,

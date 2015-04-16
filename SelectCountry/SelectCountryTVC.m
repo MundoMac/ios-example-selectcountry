@@ -9,6 +9,7 @@
 #import "SelectCountryTVC.h"
 #import "CountriesManager.h"
 #import "ShowCapitalVC.h"
+#import "ShowCountryOnMapVC.h"
 #import <SVPullToRefresh/SVPullToRefresh.h>
 
 @interface SelectCountryTVC () <UIActionSheetDelegate>
@@ -78,7 +79,7 @@
                                                              delegate:self
                                                     cancelButtonTitle:@"Cancelar"
                                                destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"Mostrar capital", @"Ver en mapa", nil];
+                                                    otherButtonTitles:@"Show capital", @"Show on map", nil];
     [actionSheet showInView:self.tableView];
 }
 
@@ -86,9 +87,13 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if ([[actionSheet buttonTitleAtIndex:buttonIndex] isEqualToString:@"Mostrar capital"]) {
+    if ([[actionSheet buttonTitleAtIndex:buttonIndex] isEqualToString:@"Show capital"]) {
         
         [self performSegueWithIdentifier:@"ShowCapital" sender:nil];
+        
+    } else if ([[actionSheet buttonTitleAtIndex:buttonIndex] isEqualToString:@"Show on map"]) {
+        
+        [self performSegueWithIdentifier:@"ShowOnMap" sender:nil];
         
     }
 }
@@ -106,6 +111,18 @@
             Country *country = [CountriesManager sharedInstance].countries[[self.tableView indexPathForSelectedRow].row];
             
             showCapitalVC.country = country;
+            
+        }
+        
+    } else if ([segue.identifier isEqualToString:@"ShowOnMap"]) {
+        
+        if ([segue.destinationViewController isKindOfClass:[ShowCountryOnMapVC class]]) {
+            
+            ShowCountryOnMapVC *showCountryOnMapVC = (ShowCountryOnMapVC *)segue.destinationViewController;
+            
+            Country *country = [CountriesManager sharedInstance].countries[[self.tableView indexPathForSelectedRow].row];
+            
+            showCountryOnMapVC.country = country;
             
         }
     }
