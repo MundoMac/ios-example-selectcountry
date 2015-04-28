@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Country.h"
+#import "Country+MKAnnotation.h"
 
 @interface ShowCountryOnMapVC : UIViewController
 
