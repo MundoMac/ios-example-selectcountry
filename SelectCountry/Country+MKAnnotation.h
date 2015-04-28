@@ -1,5 +1,5 @@
 //
-//  Country.m
+//  Country+MKAnnotation.h
 //  SelectCountry
 //
 //  Created by Diego Mazzone on 21/4/15.
@@ -7,13 +7,8 @@
 //
 
 #import "Country.h"
+#import <MapKit/MapKit.h>
 
-
-@implementation Country
-
-@dynamic name;
-@dynamic capital;
-@dynamic lat;
-@dynamic lng;
+@interface Country (MKAnnotation) <MKAnnotation>
 
 @end

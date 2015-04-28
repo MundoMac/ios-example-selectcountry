@@ -10,6 +10,9 @@
 		89423C62D8D5870B9F33617F /* libPods-SelectCountry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A96C6C6DB424258A27CD5B6C /* libPods-SelectCountry.a */; };
 		F11B15EE1AE0528D00482F39 /* ShowCountryOnMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F11B15ED1AE0528D00482F39 /* ShowCountryOnMapVC.m */; };
 		F11B15F01AE0543700482F39 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11B15EF1AE0543700482F39 /* MapKit.framework */; };
+		F12AF1FE1AE6EA74006FF647 /* SelectCountry.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F12AF1FC1AE6EA74006FF647 /* SelectCountry.xcdatamodeld */; };
+		F12AF2021AE6EAC6006FF647 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = F12AF2011AE6EAC6006FF647 /* Country.m */; };
+		F12AF2081AE6EB5B006FF647 /* Country+MKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F12AF2071AE6EB5B006FF647 /* Country+MKAnnotation.m */; };
 		F1CAE7341AD446AC003ACCC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE7331AD446AC003ACCC9 /* main.m */; };
 		F1CAE7371AD446AC003ACCC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE7361AD446AC003ACCC9 /* AppDelegate.m */; };
 		F1CAE73D1AD446AC003ACCC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1CAE73B1AD446AC003ACCC9 /* Main.storyboard */; };
@@ -18,7 +21,6 @@
 		F1CAE74E1AD446AC003ACCC9 /* SelectCountryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE74D1AD446AC003ACCC9 /* SelectCountryTests.m */; };
 		F1CAE7591AD44705003ACCC9 /* SelectCountryTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE7581AD44705003ACCC9 /* SelectCountryTVC.m */; };
 		F1CAE75E1AD44726003ACCC9 /* Synchronizer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE75D1AD44726003ACCC9 /* Synchronizer.m */; };
-		F1CAE7621AD44C3C003ACCC9 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE7611AD44C3C003ACCC9 /* Country.m */; };
 		F1CAE7651AD44C48003ACCC9 /* CountriesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE7641AD44C48003ACCC9 /* CountriesManager.m */; };
 		F1CAE7691AD45CF5003ACCC9 /* ShowCapitalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CAE7681AD45CF5003ACCC9 /* ShowCapitalVC.m */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,11 @@
 		F11B15EC1AE0528D00482F39 /* ShowCountryOnMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowCountryOnMapVC.h; sourceTree = "<group>"; };
 		F11B15ED1AE0528D00482F39 /* ShowCountryOnMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowCountryOnMapVC.m; sourceTree = "<group>"; };
 		F11B15EF1AE0543700482F39 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F12AF1FD1AE6EA74006FF647 /* SelectCountry.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SelectCountry.xcdatamodel; sourceTree = "<group>"; };
+		F12AF2001AE6EAC6006FF647 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
+		F12AF2011AE6EAC6006FF647 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
+		F12AF2061AE6EB5B006FF647 /* Country+MKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Country+MKAnnotation.h"; sourceTree = "<group>"; };
+		F12AF2071AE6EB5B006FF647 /* Country+MKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Country+MKAnnotation.m"; sourceTree = "<group>"; };
 		F1CAE72E1AD446AC003ACCC9 /* SelectCountry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelectCountry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1CAE7321AD446AC003ACCC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1CAE7331AD446AC003ACCC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -55,8 +62,6 @@
 		F1CAE7581AD44705003ACCC9 /* SelectCountryTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCountryTVC.m; sourceTree = "<group>"; };
 		F1CAE75C1AD44726003ACCC9 /* Synchronizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synchronizer.h; sourceTree = "<group>"; };
 		F1CAE75D1AD44726003ACCC9 /* Synchronizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Synchronizer.m; sourceTree = "<group>"; };
-		F1CAE7601AD44C3C003ACCC9 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
-		F1CAE7611AD44C3C003ACCC9 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
 		F1CAE7631AD44C48003ACCC9 /* CountriesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountriesManager.h; sourceTree = "<group>"; };
 		F1CAE7641AD44C48003ACCC9 /* CountriesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountriesManager.m; sourceTree = "<group>"; };
 		F1CAE7671AD45CF5003ACCC9 /* ShowCapitalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowCapitalVC.h; sourceTree = "<group>"; };
@@ -99,6 +104,18 @@
 				A96C6C6DB424258A27CD5B6C /* libPods-SelectCountry.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F12AF1FF1AE6EA78006FF647 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F12AF1FC1AE6EA74006FF647 /* SelectCountry.xcdatamodeld */,
+				F12AF2001AE6EAC6006FF647 /* Country.h */,
+				F12AF2011AE6EAC6006FF647 /* Country.m */,
+				F12AF2061AE6EB5B006FF647 /* Country+MKAnnotation.h */,
+				F12AF2071AE6EB5B006FF647 /* Country+MKAnnotation.m */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		F1CAE7251AD446AC003ACCC9 = {
@@ -187,8 +204,7 @@
 		F1CAE75F1AD4472C003ACCC9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F1CAE7601AD44C3C003ACCC9 /* Country.h */,
-				F1CAE7611AD44C3C003ACCC9 /* Country.m */,
+				F12AF1FF1AE6EA78006FF647 /* CoreData */,
 				F1CAE7631AD44C48003ACCC9 /* CountriesManager.h */,
 				F1CAE7641AD44C48003ACCC9 /* CountriesManager.m */,
 			);
@@ -341,13 +357,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F11B15EE1AE0528D00482F39 /* ShowCountryOnMapVC.m in Sources */,
+				F12AF2081AE6EB5B006FF647 /* Country+MKAnnotation.m in Sources */,
 				F1CAE7591AD44705003ACCC9 /* SelectCountryTVC.m in Sources */,
 				F1CAE7371AD446AC003ACCC9 /* AppDelegate.m in Sources */,
 				F1CAE7691AD45CF5003ACCC9 /* ShowCapitalVC.m in Sources */,
+				F12AF2021AE6EAC6006FF647 /* Country.m in Sources */,
 				F1CAE7341AD446AC003ACCC9 /* main.m in Sources */,
 				F1CAE75E1AD44726003ACCC9 /* Synchronizer.m in Sources */,
 				F1CAE7651AD44C48003ACCC9 /* CountriesManager.m in Sources */,
-				F1CAE7621AD44C3C003ACCC9 /* Country.m in Sources */,
+				F12AF1FE1AE6EA74006FF647 /* SelectCountry.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +572,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F12AF1FC1AE6EA74006FF647 /* SelectCountry.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F12AF1FD1AE6EA74006FF647 /* SelectCountry.xcdatamodel */,
+			);
+			currentVersion = F12AF1FD1AE6EA74006FF647 /* SelectCountry.xcdatamodel */;
+			path = SelectCountry.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F1CAE7261AD446AC003ACCC9 /* Project object */;
 }

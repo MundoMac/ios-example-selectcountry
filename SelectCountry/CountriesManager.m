@@ -8,6 +8,13 @@
 
 #import "CountriesManager.h"
 #import "Synchronizer.h"
+#import "AppDelegate.h"
+
+@interface CountriesManager ()
+
+@property (weak, nonatomic) NSManagedObjectContext *context;
+
+@end
 
 @implementation CountriesManager
 
@@ -18,32 +25,44 @@
     static CountriesManager *countriesManager = nil;
     dispatch_once(&pred, ^{
         countriesManager = [[CountriesManager alloc] init];
+        AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        countriesManager.context = appDelegate.managedObjectContext;
     });
     return countriesManager;
 }
 
 - (void)updateCountries
 {
-    [[Synchronizer sharedInstance] getCountries:^(NSArray * countries) {
+    
+    if ([self.countries count] != 0) {
         
-        NSMutableArray *countriesMutable = [@[] mutableCopy];
-        
-        for (NSDictionary *countryInfo in countries) {
-            Country *country = [Country new];
-            country.name = countryInfo[@"name"];
-            country.capital = countryInfo[@"capital"];
-            country.lat = [[countryInfo[@"latlng"] firstObject] doubleValue];
-            country.lng = [[countryInfo[@"latlng"] lastObject] doubleValue];
+        [[Synchronizer sharedInstance] getCountries:^(NSArray * countries) {
             
-            [countriesMutable addObject:country];
-        }
-        
-        self.countries = [countriesMutable copy];
-        
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"CountriesUpdated"
-                                                            object:self
-                                                          userInfo:nil];
-    }];
+            for (NSDictionary *countryInfo in countries) {
+                
+                Country *country = [NSEntityDescription insertNewObjectForEntityForName:@"Country" inManagedObjectContext:self.context];
+                
+                country.name = countryInfo[@"name"];
+                country.capital = countryInfo[@"capital"];
+                country.lat = @([[countryInfo[@"latlng"] firstObject] doubleValue]);
+                country.lng = @([[countryInfo[@"latlng"] lastObject] doubleValue]);
+            }
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"CountriesUpdated"
+                                                                object:self
+                                                              userInfo:nil];
+        }];
+    }
+}
+
+- (NSArray *)countries
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Country"];
+    
+    NSError *error = nil;
+    NSArray *matches = [self.context executeFetchRequest:request error:&error];
+    
+    return matches;
 }
 
 
